@@ -10,8 +10,9 @@ namespace clase_8_6
     {
         static void Main(string[] args)
         {
-            SolicitarDatos datos = new SolicitarDatos();
-            datos.solicitarDatos();
+            MenuPrincipal principal = new MenuPrincipal();
+            
+            principal.MenuInicial();
         }
     }
 }

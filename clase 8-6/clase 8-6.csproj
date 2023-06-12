@@ -59,7 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class2.cs" />
     <Compile Include="Manu\elegirturno.cs" />
     <Compile Include="Lucas\MenuPrincipal.cs" />
     <Compile Include="Agus\Reclamo.cs" />

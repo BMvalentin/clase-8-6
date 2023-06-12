@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace clase_8_6
 {
-    class MenuPrincipal
+    public class MenuPrincipal
     {
+        Reclamo reclamo = new Reclamo();
+        elegirTurno elegirTurno = new elegirTurno();
         public int opcion { get; set; }
         public bool banderaGeneral { get; set; } = false;
         public void MenuInicial(){
-            //banderaGeneral = false;
             do{
-                Console.WriteLine("\nMunicipalidad de general pueyrredon: Atención al cliente\n\n" +
+                Console.WriteLine("\nMunicipalidad de general pueyrredon: Atención al publico\n\n" +
                     "Elija una opción para continuar\n\n[1] Reclamos\n[2] Turnos\n[-1] Salir\n");
                 opcion = int.Parse(Console.ReadLine());
                 Console.Clear();
@@ -22,6 +23,7 @@ namespace clase_8_6
                 {
                     case 1:
                         Console.WriteLine("RECLAMOS:\n\n");
+                        reclamo.Reclamos1();
                         break;
                     case 2:
                         Console.WriteLine("TURNOS:\n\nElija una opción para continuar\n\n" +
@@ -34,9 +36,11 @@ namespace clase_8_6
                             {
                                 case 1:
                                     Console.WriteLine("Licencia de conducir:\n\n");
+                                    elegirTurno.seleccionLicencia();
                                     break;
                                 case 2:
                                     Console.WriteLine("A.R.M:\n\n");
+                                    elegirTurno.seleccionArm();
                                     break;
                                 case -1:
                                     Console.WriteLine("\nVolviendo al menu principal");                              
